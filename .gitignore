@@ -6,3 +6,7 @@ node_modules
 
 # Bower files
 bower_components
+
+# Ignore generted files
+assets/css/bootstrap.css
+assets/css/main.css

@@ -127,7 +127,7 @@ gulp.task('less', function() {
 		.pipe(concat('main.css'))
 		.pipe(gulp.dest(less_));
 
-	gulp.src((i == 0 ? css_files : css_files_admin))
+	gulp.src(css_files)
 		.pipe(concat('main.css'))
 		.pipe(minifyCSS({keepSpecialComments: 0}))
 		.pipe(gulp.dest(css_));
@@ -140,7 +140,7 @@ gulp.task('less', function() {
 */
 
 gulp.task('js', function() {
-	gulp.src((i == 0 ? js_files : js_files_admin))
+	gulp.src(js_files)
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(js_));
