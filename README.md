@@ -23,6 +23,6 @@ For developing easily, you can run `gulp watch` to automatically generate new `m
 
 ## Deploying
 
-To make everything easier, this repository will keep the most up-to-date versions of `main.js` and `main.css` in the public folder so nothing special has to be done when deploying.
+Running `setup.sh` will install any missing dependencies and compile/minfiy assets and place them where they should go.
 
 The root of the website should be the `public` folder so only the files and directories we say are publicly viewable.
