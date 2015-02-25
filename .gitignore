@@ -10,3 +10,5 @@ bower_components
 # Ignore generted files
 assets/css/bootstrap.css
 assets/css/main.css
+public/assets/js/main.js
+public/assets/css/main.css
