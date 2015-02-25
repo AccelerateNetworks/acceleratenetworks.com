@@ -1,0 +1,8 @@
+# OS X files
+.DS_Store
+
+# NPM files
+node_modules
+
+# Bower files
+bower_components

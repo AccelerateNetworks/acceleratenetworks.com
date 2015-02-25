@@ -1,0 +1,22 @@
+{
+  "name": "acceleratenetworks.com",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AccelerateNetworks/acceleratenetworks.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AccelerateNetworks/acceleratenetworks.com/issues"
+  },
+  "homepage": "http://acceleratenetworks.com",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-less": "^3.0.1",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^0.4.6",
+    "gulp-plumber": "^0.6.6",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.1.1"
+  }
+}
