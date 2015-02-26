@@ -189,7 +189,52 @@ header {
 
 .pricing {
 	background-color: @light;
-	padding: 100px 25px;
+	text-align: center;
+	padding: 50px 25px;
+
+	h1 {
+		margin: 0 0 25px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			width: 225px;
+			border: 1px solid darken(@light, 5%);
+
+			.plan-name {
+				background-color: @dark;
+				color: @light;
+				font-size: 18px;
+				padding: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-weight: 300;
+			}
+
+			.plan-price {
+				background-color: @light;
+				padding: 10px 25px;
+				font-size: 30px;
+				color: @dark;
+
+				span {
+					display: block;
+					font-size: 14px;
+					text-transform: uppercase;
+				}
+			}
+
+			.plan-item {
+				background-color: @light;
+				padding: 10px;
+			}
+		}
+	}
 }
 
 /*
@@ -199,9 +244,8 @@ header {
 */
 
 .contact {
-	background-color: @accelerate-blue;
+	background-color: darken(@light, 10%);
 	padding: 100px 25px;
-	color: @light;
 }
 
 /*
