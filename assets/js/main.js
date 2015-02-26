@@ -15,8 +15,16 @@ $(function() { load(); });
 // >>
 
 var load = function() {
+	// If we have '.html' at the end, remove it.
+	loc = loc.replace('.html', '');
+
+	// If we're on 'index' just set it to an empty string
+	loc = loc == 'index' ? '' : loc;
+
+	// Run the switch statment
 	switch(loc) {
-		case 'index.html':
+		case '':
+			new WOW().init();
 			break;
 	}
 };

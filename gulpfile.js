@@ -86,6 +86,7 @@ var js_bower = [
 
 	'jquery/dist/jquery.min.js',
 	'bootstrap/dist/js/bootstrap.min.js',
+	'wowjs/dist/wow.min.js',
 
 	// -- End JS files from bower -- //
 ].map(function(str) { return bower + str });
