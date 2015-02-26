@@ -7,7 +7,10 @@
 */
 
 @import "elements.less";
+@import "fonts.less";
 @import "variables.less";
+@import "header.less";
+@import "pricing.less";
 
 /*
 |--------------------------------------------------------------------------
@@ -49,192 +52,12 @@ a {
 
 /*
 |--------------------------------------------------------------------------
-| Fonts
-|--------------------------------------------------------------------------
-*/
-
-.lato {
-	font-family: 'Lato', sans-serif;
-}
-
-/*
-|--------------------------------------------------------------------------
 | Changes
 |--------------------------------------------------------------------------
 */
 
 .img-responsive {
 	margin: auto;
-}
-
-/*
-|--------------------------------------------------------------------------
-| Navigation
-|--------------------------------------------------------------------------
-*/
-
-header {
-	width: 100%;
-	position: absolute;
-
-	nav {
-		&.navbar.navbar-default {
-			background-color: @accelerate-orange-light;
-			.rounded(0);
-			border: none;
-			margin-bottom: 0;
-
-			.navbar-header {
-				button {
-					border: none;
-
-					&:hover {
-						background-color: @accelerate-orange-light;
-					}
-
-					span {
-						&.icon-bar {
-							background-color: @light;
-						}
-					}
-				}
-
-				a {
-					&.navbar-brand {
-						color: @light;
-						padding: 12px;
-						max-width: 200px;
-
-						img {
-							max-height: 100%;
-							margin: 0;
-						}
-					}
-				}
-			}
-
-			.navbar-collapse {
-				border: none;
-			}
-
-			ul {
-				&.nav {
-					li {
-						a {
-							color: @light;
-						}
-
-						&.login {
-							a {
-								span {
-									padding: 10px 15px;
-									background-color: @light;
-									color: @accelerate-orange-light;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-/*
-|--------------------------------------------------------------------------
-| Head
-|--------------------------------------------------------------------------
-*/
-
-.head {
-	height: 600px;
-	width: 100%;
-	background-image: url("@{resources}/phone.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: table;
-	text-align: center;
-
-	@media(max-width: @sm) {
-		height: 400px;
-	}
-
-	.cover {
-		background-color: fade(@accelerate-orange-light, 50%);
-		height: 100%;
-		width: 100%;
-		display: table-cell;
-		vertical-align: middle;
-
-		h1 {
-			color: @light;
-			font-size: 48px;
-
-			@media(max-width: @md) {
-				font-size: 34px;
-			}
-
-			@media(max-width: @sm) {
-				font-size: 24px;
-			}
-		}
-	}
-}
-
-/*
-|--------------------------------------------------------------------------
-| Pricing
-|--------------------------------------------------------------------------
-*/
-
-.pricing {
-	background-color: @light;
-	text-align: center;
-	padding: 50px 25px;
-
-	h1 {
-		margin: 0 0 25px;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-
-		li {
-			list-style: none;
-			display: inline-block;
-			width: 225px;
-			border: 1px solid darken(@light, 5%);
-
-			.plan-name {
-				background-color: @dark;
-				color: @light;
-				font-size: 18px;
-				padding: 10px;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				font-weight: 300;
-			}
-
-			.plan-price {
-				background-color: @light;
-				padding: 10px 25px;
-				font-size: 30px;
-				color: @dark;
-
-				span {
-					display: block;
-					font-size: 14px;
-					text-transform: uppercase;
-				}
-			}
-
-			.plan-item {
-				background-color: @light;
-				padding: 10px;
-			}
-		}
-	}
 }
 
 /*
