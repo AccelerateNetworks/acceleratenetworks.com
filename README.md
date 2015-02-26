@@ -1,6 +1,6 @@
 # Accelerate Networks
 
-![Accelerate Networks](public/assets/img/accelerate.png)
+![Accelerate Networks](public/assets/img/logos/accelerate.png)
 
 ## Developing
 
