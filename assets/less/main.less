@@ -6,6 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
+@import "elements.less";
 @import "variables.less";
 
 /*
@@ -20,10 +21,16 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+
+	// Setting background color to @dark because that's the color of the
+	// footer. If the screen is huge as shit, then the footer will just
+	// look like it's big instead of having a bunch of extra space.
+	background-color: @dark;
 }
 
 * {
 	outline: none !important;
+	.lato();
 
 	&:focus,
 	&:hover,
@@ -42,10 +49,170 @@ a {
 
 /*
 |--------------------------------------------------------------------------
+| Fonts
+|--------------------------------------------------------------------------
+*/
+
+.lato {
+	font-family: 'Lato', sans-serif;
+}
+
+/*
+|--------------------------------------------------------------------------
 | Changes
 |--------------------------------------------------------------------------
 */
 
 .img-responsive {
 	margin: auto;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Navigation
+|--------------------------------------------------------------------------
+*/
+
+header {
+	width: 100%;
+	position: absolute;
+
+	nav {
+		&.navbar.navbar-default {
+			background-color: @accelerate-orange-light;
+			.rounded(0);
+			border: none;
+			margin-bottom: 0;
+
+			.navbar-header {
+				button {
+					border: none;
+
+					&:hover {
+						background-color: @accelerate-orange-light;
+					}
+
+					span {
+						&.icon-bar {
+							background-color: @light;
+						}
+					}
+				}
+
+				a {
+					&.navbar-brand {
+						color: @light;
+						padding: 12px;
+						max-width: 200px;
+
+						img {
+							max-height: 100%;
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			.navbar-collapse {
+				border: none;
+			}
+
+			ul {
+				&.nav {
+					li {
+						a {
+							color: @light;
+						}
+
+						&.login {
+							a {
+								span {
+									padding: 10px 15px;
+									background-color: @light;
+									color: @accelerate-orange-light;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Head
+|--------------------------------------------------------------------------
+*/
+
+.head {
+	height: 600px;
+	width: 100%;
+	background-image: url(https://unsplash.imgix.net/uploads/14120938606568dde6e2b/c9e42240);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: table;
+	text-align: center;
+
+	@media(max-width: @sm) {
+		height: 400px;
+	}
+
+	.cover {
+		background-color: fade(@accelerate-orange-light, 50%);
+		height: 100%;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+
+		h1 {
+			color: @light;
+			font-size: 48px;
+
+			@media(max-width: @md) {
+				font-size: 30px;
+			}
+
+			@media(max-width: @sm) {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Pricing
+|--------------------------------------------------------------------------
+*/
+
+.pricing {
+	background-color: @light;
+	padding: 100px 25px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Contact
+|--------------------------------------------------------------------------
+*/
+
+.contact {
+	background-color: @accelerate-blue;
+	padding: 100px 25px;
+	color: @light;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+.footer {
+	background-color: @dark;
+	color: darken(@light, 5%);
+	padding: 15px 0;
+	font-weight: 300;
 }
