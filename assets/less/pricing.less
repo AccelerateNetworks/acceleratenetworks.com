@@ -11,6 +11,15 @@
 
 	h1 {
 		margin: 0 0 25px;
+		font-weight: 300;
+
+		@media(max-width: @md) {
+			font-size: 26px;
+		}
+
+		@media(max-width: @sm) {
+			font-size: 20px;
+		}
 	}
 
 	ul {
@@ -21,7 +30,19 @@
 			list-style: none;
 			display: inline-block;
 			width: 225px;
-			border: 1px solid darken(@light, 5%);
+			min-height: 300px;
+			border: 1px solid @gray;
+			margin-bottom: 25px;
+			padding-bottom: 10px;
+
+			@media(max-width: @md) {
+				width: 45%;
+			}
+
+			@media(max-width: @sm) {
+				width: 100%;
+				min-height: auto;
+			}
 
 			.plan-name {
 				background-color: @dark;

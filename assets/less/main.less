@@ -62,12 +62,58 @@ a {
 
 /*
 |--------------------------------------------------------------------------
+| Quote
+|--------------------------------------------------------------------------
+*/
+
+.quote {
+	background-image: url("@{resources}/quote.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 400px;
+	width: 100%;
+
+	@media(max-width: @sm) {
+		height: 200px;
+		background-attachment: scroll;
+	}
+
+	.cover {
+		background-color: fade(@accelerate-blue, 80%);
+		height: 100%;
+		width: 100%;
+		display: table;
+
+		h3 {
+			margin: 0;
+			display: table-cell;
+			height: 100%;
+			width: 100%;
+			vertical-align: middle;
+			text-align: center;
+			color: @light;
+			font-size: 32px;
+
+			@media(max-width: @md) {
+				font-size: 20px;
+			}
+
+			@media(max-width: @sm) {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
 | Contact
 |--------------------------------------------------------------------------
 */
 
 .contact {
-	background-color: darken(@light, 10%);
+	background-color: @light;
 	padding: 100px 25px;
 }
 
@@ -79,7 +125,7 @@ a {
 
 .footer {
 	background-color: @dark;
-	color: darken(@light, 5%);
+	color: @gray;
 	padding: 15px 0;
 	font-weight: 300;
 }
