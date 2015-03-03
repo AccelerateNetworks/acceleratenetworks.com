@@ -131,7 +131,8 @@ function initialize() {
 	var marker = new google.maps.Marker({
 		position: mapOptions.center,
 		map: map,
-		title: 'Accelerate Networks'
+		title: 'Accelerate Networks',
+		icon: '/assets/img/resources/marker.png',
 	});
 }
 
