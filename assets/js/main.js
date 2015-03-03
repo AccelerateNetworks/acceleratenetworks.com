@@ -28,3 +28,110 @@ var load = function() {
 			break;
 	}
 };
+
+// >>
+// Map
+// >>
+
+var mapOptions = {
+	center: new google.maps.LatLng(47.608136, -122.302132),
+	zoom: 14,
+	maxZoom: 14,
+	minZoom: 14,
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	disableDefaultUI: true,
+	scrollwheel: false,
+	draggable: false,
+	styles: [
+		{
+			"featureType": "administrative",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+					"color": "#444444"
+				}
+			]
+		},
+		{
+			"featureType": "landscape",
+			"elementType": "all",
+			"stylers": [
+				{
+					"color": "#f2f2f2"
+				}
+			]
+		},
+		{
+			"featureType": "poi",
+			"elementType": "all",
+			"stylers": [
+				{
+					"visibility": "off"
+				}
+			]
+		},
+		{
+			"featureType": "road",
+			"elementType": "all",
+			"stylers": [
+				{
+					"saturation": -100
+				},
+				{
+					"lightness": 45
+				}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "all",
+			"stylers": [
+				{
+					"visibility": "simplified"
+				}
+			]
+		},
+		{
+			"featureType": "road.arterial",
+			"elementType": "labels.icon",
+			"stylers": [
+				{
+					"visibility": "off"
+				}
+			]
+		},
+		{
+			"featureType": "transit",
+			"elementType": "all",
+			"stylers": [
+				{
+					"visibility": "off"
+				}
+			]
+		},
+		{
+			"featureType": "water",
+			"elementType": "all",
+			"stylers": [
+				{
+					"color": "#3279b2"
+				},
+				{
+					"visibility": "on"
+				}
+			]
+		}
+	]
+};
+
+function initialize() {
+	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+	var marker = new google.maps.Marker({
+		position: mapOptions.center,
+		map: map,
+		title: 'Accelerate Networks'
+	});
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);

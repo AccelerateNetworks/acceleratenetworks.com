@@ -12,3 +12,11 @@ assets/css/bootstrap.css
 assets/css/main.css
 public/assets/js/main.js
 public/assets/css/main.css
+
+# Font Awesome
+public/assets/fonts/FontAwesome.otf
+public/assets/fonts/fontawesome-webfont.eot
+public/assets/fonts/fontawesome-webfont.svg
+public/assets/fonts/fontawesome-webfont.ttf
+public/assets/fonts/fontawesome-webfont.woff
+public/assets/fonts/fontawesome-webfont.woff2

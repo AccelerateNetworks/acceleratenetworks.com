@@ -69,7 +69,52 @@ a {
 
 .contact {
 	background-color: @light;
-	padding: 100px 25px;
+	padding: 100px 0;
+
+	h1 {
+		@media(max-width: @sm) {
+			font-size: 24px;
+		}
+	}
+
+	h3 {
+		a {
+			color: @dark;
+		}
+
+		@media(max-width: @sm) {
+			font-size: 18px;
+		}
+	}
+
+	.square {
+		border: 2px solid @dark;
+		display: inline-block;
+		cursor: pointer;
+		margin: 10px;
+		.rounded(100%);
+
+		span {
+			display: table;
+			width: 100px;
+			height: 100px;
+
+			i {
+				width: 100%;
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+.map {
+	#map-canvas {
+		width: 100%;
+		height: 400px;
+	}
 }
 
 /*

@@ -31,6 +31,9 @@ var css_  = 'public/assets/css/';
 var _js   = 'assets/js/';
 var js_   = 'public/assets/js/';
 
+// Fonts
+var fonts = 'public/assets/fonts/';
+
 // Bower
 var bower = 'bower_components/';
 
@@ -59,6 +62,7 @@ var less_files = [
 var css_bower = [
 	// -- Add CSS files from bower -- //
 
+	'fontawesome/css/font-awesome.min.css',
 	'animate.css/animate.min.css',
 
 	// -- End CSS files from bower -- //
@@ -149,6 +153,18 @@ gulp.task('js', function() {
 
 /*
 |--------------------------------------------------------------------------
+| Copy Task
+|--------------------------------------------------------------------------
+*/
+
+gulp.task('copy', function() {
+	// Font Awesome
+	gulp.src(bower + 'fontawesome/fonts/*')
+		.pipe(gulp.dest(fonts));
+});
+
+/*
+|--------------------------------------------------------------------------
 | Watch Task
 |--------------------------------------------------------------------------
 */
@@ -176,4 +192,4 @@ gulp.task('watch', function() {
 |--------------------------------------------------------------------------
 */
 
-gulp.task('default', ['bootstrap', 'js', 'less']);
+gulp.task('default', ['bootstrap', 'js', 'less', 'copy']);
