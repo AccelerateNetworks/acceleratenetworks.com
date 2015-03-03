@@ -63,54 +63,13 @@ a {
 
 /*
 |--------------------------------------------------------------------------
-| Contact
+| Map
 |--------------------------------------------------------------------------
 */
 
-.contact {
-	background-color: @light;
-	padding: 100px 0;
-
-	h1 {
-		@media(max-width: @sm) {
-			font-size: 24px;
-		}
-	}
-
-	h3 {
-		a {
-			color: @dark;
-		}
-
-		@media(max-width: @sm) {
-			font-size: 18px;
-		}
-	}
-
-	.square {
-		border: 2px solid @dark;
-		display: inline-block;
-		cursor: pointer;
-		margin: 10px;
-		.rounded(100%);
-
-		span {
-			display: table;
-			width: 100px;
-			height: 100px;
-
-			i {
-				width: 100%;
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-				font-size: 32px;
-			}
-		}
-	}
-}
-
 .map {
+	background-color: @light;
+
 	#map-canvas {
 		width: 100%;
 		height: 400px;
@@ -128,4 +87,28 @@ a {
 	color: @gray;
 	padding: 15px 0;
 	font-weight: 300;
+
+	a {
+		color: @gray;
+
+		&:hover,
+		&:focus {
+			color: @light;
+		}
+	}
+
+	@media(max-width: @sm) {
+		.col-xs-12 {
+			text-align: center;
+
+			.pull-right {
+				float: none !important;
+				margin-bottom: 10px;
+			}
+
+			.text-right {
+				text-align: center;
+			}
+		}
+	}
 }
