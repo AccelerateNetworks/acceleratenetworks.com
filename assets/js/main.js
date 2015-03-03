@@ -124,8 +124,9 @@ var mapOptions = {
 	]
 };
 
+var map;
 function initialize() {
-	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 	var marker = new google.maps.Marker({
 		position: mapOptions.center,
@@ -135,3 +136,6 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'resize', function() {
+	map.setCenter(mapOptions.center);
+});
