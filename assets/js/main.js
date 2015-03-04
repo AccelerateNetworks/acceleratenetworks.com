@@ -1,10 +1,4 @@
 // >>
-// Get the location on the page
-// >>
-
-var loc = location.href.split('/')[3].split("?")[0].split("#")[0];
-
-// >>
 // Start on load
 // >>
 
@@ -15,19 +9,39 @@ $(function() { load(); });
 // >>
 
 var load = function() {
-	// If we have '.html' at the end, remove it.
-	loc = loc.replace('.html', '');
+	// wow transitions
+	new WOW().init();
 
-	// If we're on 'index' just set it to an empty string
-	loc = loc == 'index' ? '' : loc;
-
-	// Run the switch statment
-	switch(loc) {
-		case '':
-			new WOW().init();
-			break;
-	}
+	// scrollto transitions
+	helpers.scrollFromTo('a[href="#pricing"]', '.pricing');
+	helpers.scrollFromTo('a[href="#contact"]', '.contact');
 };
+
+var helpers = {
+
+	// >>
+	// Scroll From To
+	// >>
+
+	scrollFromTo: function(from, to) {
+		// Bind the scroll
+		$(from).bind('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $(to).offset().top
+			}, 1250);
+		});
+
+		// Make sure to allow exiting out of the scroll
+		if (window.addEventListener)
+			document.addEventListener('DOMMouseScroll', function() {
+				$('html, body').stop(true, false);
+			}, false);
+			document.addEventListener('mousewheel', function() {
+				$('html, body').stop(true, false);
+			}, false);
+	}
+}
 
 // >>
 // Map
