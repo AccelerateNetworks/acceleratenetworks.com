@@ -67,7 +67,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#pricing">Pricing</a></li>
 							<li><a href="#contact">Contact</a></li>
-							<li class="login"><a href="https://numbersearch.acceleratenetworks.com/"><span>Number Searcg</span></a></li>
+							<li class="login"><a href="https://numbersearch.acceleratenetworks.com/"><span>Number Search</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -226,7 +226,7 @@
 							<br/><a href="mailto:info@acceleratenetworks.com">info@acceleratenetworks.com</a>
 						</div>
 						Proudly made in Seattle, WA
-						<br/>&copy; 2015 Accelerate Networks
+						<br/>&copy; 2018 Accelerate Networks
 					</div>
 				</div>
 			</div>
@@ -235,17 +235,19 @@
 		<!--SCRIPTS-->
 		<script src="/assets/js/main.js"></script>
 		<!--PIWIK TRACKING -->
+		<!-- Matomo -->
 		<script type="text/javascript">
-			var _paq = _paq || [];
-			_paq.push(['trackPageView']);
-			_paq.push(['enableLinkTracking']);
-			(function() {
-				var u="//acceleratenetworks.com/piwik/";
-				_paq.push(['setTrackerUrl', u+'piwik.php']);
-				_paq.push(['setSiteId', 1]);
-				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-				g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-			})();
+		  var _paq = _paq || [];
+		  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+		    var u="//analytics.acceleratenetworks.com/";
+		    _paq.push(['setTrackerUrl', u+'piwik.php']);
+		    _paq.push(['setSiteId', '19']);
+		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		  })();
 		</script>
 		<noscript><p><img src="//acceleratenetworks.com/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
 		<!--END PIWIK TRACKING CODE-->
