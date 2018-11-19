@@ -42,9 +42,9 @@
 
 		<!--STYLESHEETS-->
 		<link rel="stylesheet" href="/assets/css/main.css">
+		<link rel="stylesheet" href="/assets/css/map.css">
 
 		<!--SCRIPTS-->
-		<!-- <script src="//maps.googleapis.com/maps/api/js"></script> -->
 		<!--MapboxScripts-->
 		<script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
@@ -215,18 +215,43 @@
 		</div>
 
 		<!--MAP-->
-		<!-- <div class="map">
-			<div id="map-canvas"></div>
-		</div> -->
 		<div id='map' style='width: 100%; height: 300px;'></div>
 		<script>
   			mapboxgl.accessToken = 'pk.eyJ1IjoidW5jaGVja2VkZXJyb3IiLCJhIjoiTkNzaWFqOCJ9.fqhZgsGh60h8OdWjVqbYhg';
   			var map = new mapboxgl.Map({
     		container: 'map',
     		style: 'mapbox://styles/mapbox/streets-v10',
-				center: [-122.302132, 47.608136],
-				zoom: 13
+				center: [-122.302132, 47.60867],
+				zoom: 13.5
 			});
+			var geojson = {
+			  "type": "FeatureCollection",
+			  "features": [
+			    {
+			      "type": "Feature",
+			      "properties": {},
+			      "geometry": {
+			        "type": "Point",
+			        "coordinates": [
+			          -122.302132,
+			          47.60867
+			        ]
+			      }
+			    }
+			  ]
+			}
+		// add markers to map
+		geojson.features.forEach(function(marker) {
+
+		  // create a HTML element for each feature
+		  var el = document.createElement('div');
+		  el.className = 'marker';
+
+		  // make a marker for each feature and add to the map
+		  new mapboxgl.Marker(el)
+		  .setLngLat(marker.geometry.coordinates)
+		  .addTo(map);
+		});
 		</script>
 		<!--FOOTER-->
 		<div class="footer">
